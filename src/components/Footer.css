@@ -1,0 +1,31 @@
+footer {
+  height: fit-content;
+  width: 100%;
+  background: rgb(0, 0, 0);
+}
+footer h2,
+p {
+  color: rgb(255, 255, 255);
+}
+footer h2 {
+  padding-bottom: 1rem;
+}
+footer a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+@media (max-width: 768px) {
+  footer .col {
+    align-items: start !important;
+  }
+  footer .col-md-5 {
+    align-items: start !important;
+  }
+  footer .footerBrand {
+    flex-direction: row !important;
+    gap: 1rem !important;
+  }
+  footer .borderBottom {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+  }
+}

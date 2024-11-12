@@ -1,0 +1,54 @@
+.about {
+  position: relative;
+}
+.aboutContentParent {
+  height: fit-content;
+  width: 100%;
+  background: #e4e3e3;
+}
+.about img {
+  height: 90vh;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.about p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fffff0;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  width: 50%;
+}
+.aboutContent {
+  width: 100%;
+  padding: 3rem;
+}
+.aboutContent img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+.aboutContent p {
+  color: rgba(0, 0, 0, 9);
+  font-size: 1rem;
+}
+.aboutContentText {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContentText {
+    padding-top: 2rem;
+    text-align: center;
+  }
+  .about img {
+    object-position: 25%;
+  }
+}

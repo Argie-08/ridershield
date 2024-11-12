@@ -1,0 +1,124 @@
+.cartParent {
+  width: 100%;
+  background: #e4e3e3;
+  min-height: 70vh;
+}
+.cartContainer p {
+  color: rgba(0, 0, 0, 0.8);
+}
+.cartContainer .headerCart {
+  display: flex;
+  justify-content: space-between;
+}
+.cartContainer .headerCart h2 {
+  color: #ff3333;
+}
+.cartContainer .headerCart p {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.cartContainer .headerCart p:hover {
+  color: #ff3333;
+}
+.cartContainer img {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+}
+
+.cartContainer .cartRow td {
+  padding: 2rem 2rem;
+}
+
+.cartContainer .cartItems {
+  display: flex;
+  gap: 2rem;
+}
+.cartContainer .cartItems div p {
+  margin: 0;
+}
+.cartContainer .quantity {
+  display: flex;
+  align-items: center;
+  border: solid 1px rgba(0, 0, 0, 0.5);
+  width: fit-content;
+}
+.cartContainer .quantity input {
+  width: 4rem;
+  text-align: center;
+  border-radius: 0rem;
+  border: none;
+}
+.cartContainer .quantity button:hover {
+  transform: translateY(0);
+}
+.cartContainer .quantity button {
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  width: 1rem;
+  padding: 0px 15px;
+}
+.cartContainer .quantity button span {
+  font-size: 1.4rem;
+}
+
+.cartContainer .cartQuantityBox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cartContainer .pi-trash {
+  cursor: pointer;
+  transition: all ease 0.3s;
+}
+.cartContainer .pi-trash:hover {
+  color: #ff3333;
+}
+.cartContainer .cartSubTotal {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.cartContainer .cartSubTotal button {
+  width: 300px;
+  background: #ff3333;
+  color: #fffff0;
+  transition: all ease 0.3s;
+}
+.cartContainer .cartSubTotal .Gcash {
+  background: #1a61ff;
+  margin-top: 1rem;
+}
+.cartContainer .cartSubTotal .Gcash:hover {
+  background: transparent !important;
+  border: solid 1px #1a61ff !important;
+  color: #1a61ff !important;
+}
+.cartContainer .cartSubTotal button:hover {
+  background: transparent !important;
+  border: solid 1px #ff3333 !important;
+  color: #ff3333 !important;
+}
+.cartContainer .cartSubTotal span {
+  margin-left: 1rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.ant-spin-spinning {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .cartContainer .cartSubTotal button {
+    width: 100%;
+  }
+}

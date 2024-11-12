@@ -1,0 +1,120 @@
+.fullface {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #e4e3e3;
+}
+.fullface .bgMenu {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+.fullface h2 {
+  font-size: clamp(1rem, -2rem + 8.3333vw, 2rem);
+  font-weight: 700;
+}
+
+.fullface .card {
+  background-color: transparent;
+  border: none;
+}
+.fullface .container {
+  flex-grow: 1;
+  height: 100%;
+}
+.fullface .containeRow {
+  min-height: 50vh;
+}
+
+.cardImages img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+.cardImages p {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.cardImages .p-card-title {
+  font-size: 1.5rem;
+  color: #ff0000;
+}
+.fullface .cardImages {
+  background: rgba(0, 0, 0, 0) !important;
+  transition: 0.5s ease;
+  border-radius: 0.5rem;
+  border: solid 1px #00000a36;
+}
+.fullface .prodOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.fullface .prodOptions label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all ease 0.3s;
+  cursor: pointer;
+  padding: 0.3rem 1rem;
+}
+.fullface .prodOptions label:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+.fullface h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+  border-bottom: solid 1px #00000a36;
+}
+.fullface .productBasis {
+  height: fit-content;
+}
+.fullface select {
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+}
+.parentResult {
+  display: flex;
+  flex-direction: column;
+}
+.paginationKey {
+  margin-top: auto;
+  height: fit-content;
+}
+.fullface .ant-btn-default {
+  background: rgba(0, 0, 0, 0.9);
+  color: #ffff;
+  font-weight: 700;
+}
+.fullface .ant-btn-default:hover {
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #ffff !important;
+  font-weight: 700;
+  border: solid 1px #00000a !important;
+}
+.fullface .cardCase {
+  position: relative;
+  overflow: hidden;
+}
+.fullface .btnCheckOut {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.fullface .cardCase:hover .btnCheckOut {
+  opacity: 1;
+}
+.fullface .cardCase:hover .cardImages {
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+.fullface .shadow-none {
+  background: rgba(0, 0, 0, 0) !important;
+}
+.fullface .cardCase:hover .shadow-none {
+  background: rgba(0, 0, 0, 0) !important;
+}

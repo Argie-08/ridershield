@@ -1,0 +1,36 @@
+.pageshero {
+  height: fit-content;
+  position: relative;
+}
+.pageshero video {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+.pageshero p {
+  font-size: clamp(2rem, 0rem + 8.3333vw, 4rem);
+  color: #ffff;
+  /* text-shadow: -3px -3px 0 black, 3px -3px 0 black, -3px 3px 0 black,
+    3px 3px 0 black; */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+}
+.pageshero .performance {
+  color: #ff0000;
+  font-weight: 700;
+}
+.pageshero .textLight {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#allContents {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+}

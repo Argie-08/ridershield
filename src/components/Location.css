@@ -1,0 +1,86 @@
+article {
+  background: rgba(0, 0, 0, 0.4);
+  height: fit-content;
+  width: 100%;
+  padding: 2rem;
+}
+article .container,
+.row,
+.col {
+  height: 100%;
+}
+.shopLocation button {
+  margin-top: 2rem;
+  padding: 1rem 4rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  transition: all 0.3s;
+}
+.shopLocation button:hover {
+  transform: translateY(-0.5rem);
+  box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 1);
+  color: #ffff;
+}
+.p-dialog-header {
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 1);
+}
+.p-dialog-content {
+  padding: 1rem;
+}
+.p-dialog-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fffff0;
+}
+.dialogText {
+  color: rgba(0, 0, 0, 1);
+}
+
+.storeImageFrame {
+  height: 50vh;
+  width: 100%;
+  padding: 2rem;
+}
+article img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  filter: blur(0.8px);
+}
+article h2 {
+  font-size: clamp(2rem, 0.6154rem + 3.8462vw, 3rem);
+  font-weight: 700;
+}
+article p {
+  font-size: clamp(1rem, 0.3077rem + 1.9231vw, 1.5rem);
+  color: rgb(0, 0, 0);
+}
+.locationAddress p {
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  margin: 0;
+}
+.locationAddress {
+  margin-bottom: 1rem;
+}
+.addressMap {
+  height: 450px;
+}
+@media (max-width: 768px) {
+  article button {
+    width: 100%;
+  }
+  article button:hover {
+    transform: scaleX(1);
+  }
+  .addressMap {
+    height: 150px;
+  }
+  .shopLocation button {
+    margin-top: 0;
+  }
+}
