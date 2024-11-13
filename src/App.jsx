@@ -58,13 +58,11 @@ const App = ({}) => {
 
   const [total, setTotal] = useState(0);
 
-  function currency(data) {
-    const currencyPeso = data.toLocaleString("en-PH", {
+  const currency = (data) =>
+    data.toLocaleString("en-PH", {
       style: "currency",
       currency: "PHP",
     });
-    return currencyPeso;
-  }
 
   useEffect(() => {
     async function products() {
@@ -76,46 +74,44 @@ const App = ({}) => {
   }, []);
 
   return (
-    <>
-      <AppContext.Provider
-        value={{
-          setHelmetOption,
-          helmetOption,
-          fullFace,
-          setFullFace,
-          offRoad,
-          setOffRoad,
-          styleProducts,
-          setStyleProducts,
-          selectedProduct,
-          setSelectedProduct,
-          cart,
-          setCart,
-          currency,
-          quantity,
-          setQuantity,
-          total,
-          setTotal,
-          payoutTotal,
-          setPayoutTotal,
-          payoutOrder,
-          setPayoutOrder,
-          allProducts,
-        }}
-      >
-        <Navi />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/product/:data" element={<Fullface />} />
-          <Route path="product/:category/:brand/:name" element={<Product />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/payout" element={<Payout />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact-us" element={<Contact />} />
-        </Routes>
-        <Footer />
-      </AppContext.Provider>
-    </>
+    <AppContext.Provider
+      value={{
+        setHelmetOption,
+        helmetOption,
+        fullFace,
+        setFullFace,
+        offRoad,
+        setOffRoad,
+        styleProducts,
+        setStyleProducts,
+        selectedProduct,
+        setSelectedProduct,
+        cart,
+        setCart,
+        currency,
+        quantity,
+        setQuantity,
+        total,
+        setTotal,
+        payoutTotal,
+        setPayoutTotal,
+        payoutOrder,
+        setPayoutOrder,
+        allProducts,
+      }}
+    >
+      <Navi />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/product/:data" element={<Fullface />} />
+        <Route path="product/:category/:brand/:name" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/payout" element={<Payout />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
+      </Routes>
+      <Footer />
+    </AppContext.Provider>
   );
 };
 
