@@ -1,16 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { StrictMode } from "react";
 import { BrowserRouter } from "react-router-dom";
-import { PrimeReactProvider } from "primereact/api";
-import App from "./App";
+import { PrimeReactProvider, PrimeReactContext } from "primereact/api";
+import App from "./App.jsx";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+import "primeicons/primeicons.css";
+import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <PrimeReactProvider>
-      <BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <PrimeReactProvider>
         <App />
-      </BrowserRouter>
-    </PrimeReactProvider>
-  </StrictMode>
+      </PrimeReactProvider>
+    </BrowserRouter>
+  </React.StrictMode>
 );
