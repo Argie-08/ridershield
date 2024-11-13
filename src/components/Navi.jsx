@@ -22,12 +22,14 @@ const Navi = () => {
     setLength(cartLength);
   }, [cart]);
 
-  function home() {
+  function home(e) {
+    e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
   }
 
-  function navigateCart() {
+  function navigateCart(e) {
+    e.preventDefault;
     navigate("/cart");
     window.scrollTo(0, 0);
   }
@@ -48,7 +50,8 @@ const Navi = () => {
     navigate("/contact-us");
     closeSideBar();
   };
-  const handleHomePhone = () => {
+  const handleHomePhone = (e) => {
+    e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
     closeSideBar();
@@ -60,16 +63,19 @@ const Navi = () => {
     window.scrollTo(0, 0);
   };
 
-  const handleContact = () => {
-    navigate("/contact-us", { replace: true });
+  const handleContact = (e) => {
+    e.preventDefault();
+    navigate("/contact-us");
     window.scrollTo(0, 0);
   };
 
-  const handleHome = () => {
+  const handleHome = (e) => {
+    e.preventDefault();
     navigate("/");
     window.scrollTo(0, 0);
   };
-  const handleShop = () => {
+  const handleShop = (e) => {
+    e.preventDefault();
     setStyleProducts(allProducts);
     localStorage.setItem("styleProducts", JSON.stringify(allProducts));
     navigate("product/shop");
