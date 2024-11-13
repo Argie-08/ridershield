@@ -37,12 +37,14 @@ const Navi = () => {
     sidebar.checked = false;
   };
 
-  const handleSideBarOffRoad = () => {
+  const handleSideBarOffRoad = (e) => {
+    e.preventDefault();
     navigate("/about");
     window.scrollTo(0, 0);
     closeSideBar();
   };
-  const handleSideBarOpenFace = () => {
+  const handleSideBarOpenFace = (e) => {
+    e.preventDefault();
     navigate("/contact-us");
     closeSideBar();
   };
@@ -52,13 +54,15 @@ const Navi = () => {
     closeSideBar();
   };
 
-  const handleAbout = () => {
+  const handleAbout = (e) => {
+    e.preventDefault();
     navigate("/about");
     window.scrollTo(0, 0);
   };
 
   const handleContact = () => {
-    navigate("/contact-us");
+    navigate("/contact-us", { replace: true });
+    window.scrollTo(0, 0);
   };
 
   const handleHome = () => {
