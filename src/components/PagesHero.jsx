@@ -1,10 +1,10 @@
 import "./PagesHero.css";
-import evo from "../assets/1c.mp4";
-import fullFace from "../assets/1a.mp4";
-import racing from "../assets/1b.mp4";
-import openFace from "../assets/1d.mp4";
-import offRoad from "../assets/1e.mp4";
-import helmet from "../assets/1f.mp4";
+import evo from "../assets/1c-a.mp4";
+import fullFace from "../assets/1a-a.mp4";
+import racing from "../assets/1b-a.mp4";
+import openFace from "../assets/1d-a.mp4";
+import offRoad from "../assets/1e-a.mp4";
+import helmet from "../assets/1f-a.mp4";
 import accessories from "../assets/1g.mp4";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";

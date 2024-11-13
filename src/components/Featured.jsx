@@ -12,7 +12,7 @@ import OffRoad from "../assets/tour.png";
 import { AppContext } from "../AppContext";
 import useApi from "../utils/http";
 import React from "react";
-import featureVid from "../assets/1c.mp4";
+import featureVid from "../assets/1c-a.mp4";
 
 import "./Featured.css";
 

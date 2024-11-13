@@ -108,8 +108,6 @@ const App = ({}) => {
           <Route path="/" element={<Home />} />
           <Route path="/product/:data" element={<Fullface />} />
           <Route path="product/:category/:brand/:name" element={<Product />} />
-          //This ensures that React Router can match the path even when the page
-          is refreshed.
           <Route path="/cart" element={<Cart />} />
           <Route path="/payout" element={<Payout />} />
           <Route path="/about" element={<About />} />
