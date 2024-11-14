@@ -59,9 +59,9 @@
     font-size: 0.8rem;
   }
   .carouselBody button {
-    margin-top: 2rem;
     padding: 1rem 4rem;
     font-size: 1.3rem;
-    margin-left: 2.5rem;
+    display: block;
+    margin: 40px auto 0 auto;
   }
 }

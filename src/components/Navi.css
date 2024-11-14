@@ -184,11 +184,12 @@ nav .cartCount {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .sidebar {
-    width: 100%;
-    right: -100%;
+    width: 50%;
+    right: -50%;
     margin-top: 60px;
+    background: rgba(0, 0, 0, 0.9);
   }
   nav {
     padding-right: 1rem;
@@ -212,5 +213,16 @@ nav .cartCount {
   }
   nav .pi-shopping-cart {
     font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+    right: -100%;
+    margin-top: 60px;
+  }
+  nav ul {
+    gap: 1rem;
   }
 }
