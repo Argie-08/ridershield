@@ -58,11 +58,14 @@ const App = ({}) => {
 
   const [total, setTotal] = useState(0);
 
-  const currency = (data) =>
-    data.toLocaleString("en-PH", {
+  function currency(data) {
+    const numberAmount = parseFloat(data);
+    const currencyPeso = numberAmount.toLocaleString("en-PH", {
       style: "currency",
       currency: "PHP",
     });
+    return currencyPeso;
+  }
 
   useEffect(() => {
     async function products() {
