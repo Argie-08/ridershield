@@ -16,16 +16,14 @@ import { AppContext } from "./AppContext";
 
 const App = ({}) => {
   const api = useApi();
+  const [helmetOption, setHelmetOption] = useState("All");
+  const [fullFace, setFullFace] = useState("");
+  const [offRoad, setOffRoad] = useState("");
   const [allProducts, setAllProducts] = useState([]);
-
   const [styleProducts, setStyleProducts] = useState(() => {
     const storedProducts = localStorage.getItem("styleProducts");
     return storedProducts ? JSON.parse(storedProducts) : [];
   }); //This is how you get the value of styleProducts set in Featured.jsx
-
-  const [helmetOption, setHelmetOption] = useState("All");
-  const [fullFace, setFullFace] = useState("");
-  const [offRoad, setOffRoad] = useState("");
 
   const [selectedProduct, setSelectedProduct] = useState(() => {
     const storedSelectedProducts = localStorage.getItem("selectedProducts");
@@ -53,6 +51,15 @@ const App = ({}) => {
   });
 
   useEffect(() => {
+    async function products() {
+      const { data } = await api.get("/products");
+      setAllProducts(data);
+    }
+    products();
+    return () => {};
+  }, []);
+
+  useEffect(() => {
     setQuantity(cart.map((item) => item.quantity));
   }, [cart]);
 
@@ -66,15 +73,6 @@ const App = ({}) => {
     });
     return currencyPeso;
   }
-
-  useEffect(() => {
-    async function products() {
-      const { data } = await api.get("/products");
-      setAllProducts(data);
-    }
-    products();
-    return () => {};
-  }, []);
 
   return (
     <>
